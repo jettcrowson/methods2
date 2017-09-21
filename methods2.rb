@@ -16,7 +16,12 @@
 
 
 # TODO - write elevenish?
-	
+    
+def elevenish?(int)
+    return int % 11 == 0 || (int + 1) % 11 == 0 ? true : false
+end
+
+
 # TODO - write ice_cream_party?
 
 # TODO - write successful_squirrel_party?
