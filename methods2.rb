@@ -36,6 +36,16 @@ end
 
 # TODO - write successful_squirrel_party?
 
+def successful_squirrel_party?(nuts, is_weekend)
+    if nuts < 40
+        return false
+    elsif nuts <= 60 
+        return true
+    else
+        return is_weekend ? true : false
+    end
+end
+
 # TODO - write ticket
 
 # TODO - write in_order?
