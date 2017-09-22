@@ -1,4 +1,4 @@
-require "./test_maker"
+require_relative "test_maker"
 
 t = Test.new
 t.setup
@@ -32,4 +32,4 @@ t.create("methods2")
         t.minitest("Party is not successful on weekday with 12 nuts", [12, false], false),
         t.minitest("Party is not successful on weekend with 12 nuts", [12, true], false)
     ])
-t.write("test")
+t.write(File.basename(__FILE__))
