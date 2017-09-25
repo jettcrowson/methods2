@@ -72,4 +72,21 @@ describe 'methods2' do
 			successful_squirrel_party?(12,true).must_equal(false)
 		end
 	end
+	describe 'ticket' do
+		it '10 when b is 6 and c is 4' do
+			ticket(12,6,4).must_equal(10)
+		end
+		it '10 when a is 1 and b is 9' do
+			ticket(1,9,1).must_equal(10)
+		end
+		it '10 when a is 7 and c is 3' do
+			ticket(7,1,3).must_equal(10)
+		end
+		it '5 when a is 12, b is 8, c is 2' do
+			ticket(12,8,2).must_equal(5)
+		end
+		it '5 when a is 4, b is 20, c is 10' do
+			ticket(4,20,10).must_equal(5)
+		end
+	end
 end
