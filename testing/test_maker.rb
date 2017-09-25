@@ -42,7 +42,7 @@ class Test
         function_and_minitests.push("\tend")
         function_and_minitests.each{ |to_push| @to_write.insert(-2, to_push)}
     end
-    def minitest(test_desc, parameters, must_equal)
+    def test(test_desc, parameters, must_equal)
         minitest_lines = []
         minitest_lines.push("\t\tit '#{test_desc}' do")
         minitest_lines.push("\t\t\t#{@function_name}(#{parameters.join(',')}).must_equal(#{must_equal})")

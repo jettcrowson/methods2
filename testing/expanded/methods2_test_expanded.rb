@@ -82,11 +82,48 @@ describe 'methods2' do
 		it '10 when a is 7 and c is 3' do
 			ticket(7,1,3).must_equal(10)
 		end
-		it '5 when a is 12, b is 8, c is 2' do
-			ticket(12,8,2).must_equal(5)
+		it '5 when a is 23, b is 17, c is 13' do
+			ticket(23,17,13).must_equal(5)
 		end
 		it '5 when a is 4, b is 20, c is 10' do
 			ticket(4,20,10).must_equal(5)
+		end
+		it '0 when a is 1, b is 12, and c is 3' do
+			ticket(1,12,3).must_equal(0)
+		end
+	end
+	describe 'in_order?' do
+		it 'They are bigger if given 1, 2, 3, and false' do
+			in_order?(1,2,3,false).must_equal(true)
+		end
+		it 'They are bigger if given 1, 2, 3, and true' do
+			in_order?(1,2,3,true).must_equal(true)
+		end
+		it 'They are bigger if given 1, 0, 3, and true' do
+			in_order?(1,0,3,true).must_equal(true)
+		end
+		it 'They are not bigger if given 1, 2, 3, and false' do
+			in_order?(1,0,3,false).must_equal(false)
+		end
+		it 'They are not bigger if given 2, 1, 0 and false' do
+			in_order?(2,1,0,false).must_equal(false)
+		end
+		it 'They are not bigger if given 2, 1, 0 and true' do
+			in_order?(2,1,0,true).must_equal(false)
+		end
+	end
+	describe 'less_by_ten?' do
+		it 'less by ten when 1, 23, 12' do
+			less_by_ten?(1,23,12).must_equal(true)
+		end
+		it 'less by ten when 13, 8, 30' do
+			less_by_ten?(13,8,30).must_equal(true)
+		end
+		it 'not less by ten when 1, 2, 3' do
+			less_by_ten?(1,2,3).must_equal(false)
+		end
+		it 'less by ten when 1, 2, 300' do
+			less_by_ten?(1,2,300).must_equal(true)
 		end
 	end
 end
