@@ -57,4 +57,12 @@ t.create("methods2")
         t.test("not less by ten when 1, 2, 3", [1, 2, 3], false),
         t.test("less by ten when 1, 2, 300", [1, 2, 300], true)
     ])
+    t.new_test("fizz_string")
+    t.function_test([
+        t.test("firetruck returns Fizz", ["firetruck"], "Fizz"),
+        t.test("dab returns Buzz", ["dab"], "Buzz"),
+        t.test("fib returns FizzBuzz", ["fib"], "FizzBuzz"),
+        t.test("Fib returns FizzBuzz", ["Fib"], "FizzBuzz"),
+        t.test("call returns call", ["call"], "call")
+    ])
 t.write(File.basename(__FILE__))

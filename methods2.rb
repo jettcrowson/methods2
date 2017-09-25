@@ -72,6 +72,10 @@ end
 
 # TODO - write fizz_string
 
+def fizz_string(str)
+    return str[0].downcase
+end
+
 # TODO - write first_last_six?
 
 # TODO - write rotate_left

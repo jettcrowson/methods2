@@ -44,8 +44,20 @@ class Test
     end
     def test(test_desc, parameters, must_equal)
         minitest_lines = []
+        parameters_fixed = []
+
+        parameters.each do |param|
+            if param.instance_of?(String)
+                parameters_fixed.push("'#{param}'")
+            else
+                parameters_fixed.push(param)
+            end
+        end
+
+        must_equal_fixed = must_equal.instance_of?(String) ? "'#{must_equal}'" : must_equal
+
         minitest_lines.push("\t\tit '#{test_desc}' do")
-        minitest_lines.push("\t\t\t#{@function_name}(#{parameters.join(',')}).must_equal(#{must_equal})")
+        minitest_lines.push("\t\t\t#{@function_name}(#{parameters_fixed.join(',')}).must_equal(#{must_equal})")
         minitest_lines.push("\t\tend")
 
         return minitest_lines

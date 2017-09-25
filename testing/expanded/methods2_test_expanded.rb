@@ -126,4 +126,21 @@ describe 'methods2' do
 			less_by_ten?(1,2,300).must_equal(true)
 		end
 	end
+	describe 'fizz_string' do
+		it 'firetruck returns Fizz' do
+			fizz_string('firetruck').must_equal(Fizz)
+		end
+		it 'dab returns Buzz' do
+			fizz_string('dab').must_equal(Buzz)
+		end
+		it 'fib returns FizzBuzz' do
+			fizz_string('fib').must_equal(FizzBuzz)
+		end
+		it 'Fib returns FizzBuzz' do
+			fizz_string('Fib').must_equal(FizzBuzz)
+		end
+		it 'call returns call' do
+			fizz_string('call').must_equal(call)
+		end
+	end
 end
