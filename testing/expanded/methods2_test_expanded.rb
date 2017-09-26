@@ -162,7 +162,7 @@ describe 'methods2' do
 	end
 	describe 'rotate_left' do
 		it 'will return 2,3,1' do
-			rotate_left(1,2,3).must_equal([2, 3, 1])
+			rotate_left([1, 2, 3]).must_equal([2, 3, 1])
 		end
 	end
 end

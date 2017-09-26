@@ -92,6 +92,8 @@ end
 
 # TODO - write rotate_left
 
-
+def rotate_left(num_list)
+    return [num_list[1], num_list[2], num_list[0]]
+end
 
 # TODO - write double23?

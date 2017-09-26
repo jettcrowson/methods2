@@ -75,6 +75,6 @@ t.create("methods2")
     ])
     t.new_test("rotate_left")
     t.function_test([
-        t.test("will return 2,3,1", [1,2,3], [2,3,1])
+        t.test("will return 2,3,1", [[1,2,3]], [2,3,1])
     ])
 t.write(File.basename(__FILE__))
