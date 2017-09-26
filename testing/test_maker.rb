@@ -56,6 +56,14 @@ class Test
             end
         end
 
+        if must_equal.instance_of?(String)
+            must_equal_fixed = "'#{must_equal}'"
+        elsif must_equal.instance_of?(Array)
+           must_equal_fixed = ("#{must_equal_fixed}")
+        else
+            must_equal_fixed = must_equal
+        end
+
         must_equal_fixed = must_equal.instance_of?(String) ? "'#{must_equal}'" : must_equal
 
         minitest_lines.push("\t\tit '#{test_desc}' do")
