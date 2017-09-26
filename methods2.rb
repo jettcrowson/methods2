@@ -97,3 +97,12 @@ def rotate_left(num_list)
 end
 
 # TODO - write double23?
+
+def double23?(num_list)
+    twos = 0
+    threes = 0
+
+    num_list.each{ |num| if num == 2 then twos +=1 elsif num == 3 then threes +=1 end }
+    
+    return twos >= 2 || threes >= 2 ? true : false
+end

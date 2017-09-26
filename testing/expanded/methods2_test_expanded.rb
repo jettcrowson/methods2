@@ -165,4 +165,30 @@ describe 'methods2' do
 			rotate_left([1, 2, 3]).must_equal([2, 3, 1])
 		end
 	end
+	describe 'double23?' do
+		it 'array does have 2 or 3 twice' do
+			double23?([2, 2, 4]).must_equal(true)
+		end
+		it 'array does have 2 or 3 twice' do
+			double23?([3, 3, 2]).must_equal(true)
+		end
+		it 'array does have 2 or 3 twice' do
+			double23?([2, 2]).must_equal(true)
+		end
+		it 'array does have 2 or 3 twice' do
+			double23?([3, 3]).must_equal(true)
+		end
+		it 'array does not have 2 or 3 twice' do
+			double23?([1, 2, 3]).must_equal(false)
+		end
+		it 'array does not have 2 or 3 twice' do
+			double23?([2, 3]).must_equal(false)
+		end
+		it 'array does not have 2 or 3 twice' do
+			double23?([2]).must_equal(false)
+		end
+		it 'array does not have 2 or 3 twice' do
+			double23?([]).must_equal(false)
+		end
+	end
 end
