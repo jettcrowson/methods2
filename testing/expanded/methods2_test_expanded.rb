@@ -145,13 +145,13 @@ describe 'methods2' do
 	end
 	describe 'first_last_six?' do
 		it 'array does have 6 as a first or last element' do
-			first_last_six?([1,2,3,4,5,6]).must_equal(true)
+			first_last_six?([1, 2, 3, 4, 5, 6]).must_equal(true)
 		end
 		it 'array does have 6 as a first or last element' do
-			first_last_six?([6,5,4,3,2,1]).must_equal(true)
+			first_last_six?([6, 5, 4, 3, 2, 1]).must_equal(true)
 		end
 		it 'array does not have 6 as a first or last element' do
-			first_last_six?([1,2,3]).must_equal(false)
+			first_last_six?([1, 2, 3]).must_equal(false)
 		end
 		it 'array does not have 6 as a first or last element' do
 			first_last_six?([3]).must_equal(false)

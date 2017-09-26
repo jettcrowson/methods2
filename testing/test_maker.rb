@@ -49,6 +49,8 @@ class Test
         parameters.each do |param|
             if param.instance_of?(String)
                 parameters_fixed.push("'#{param}'")
+            elsif param.instance_of?(Array)
+                parameters_fixed.push("#{param}")
             else
                 parameters_fixed.push(param)
             end
