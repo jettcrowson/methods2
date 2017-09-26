@@ -57,7 +57,7 @@ class Test
         must_equal_fixed = must_equal.instance_of?(String) ? "'#{must_equal}'" : must_equal
 
         minitest_lines.push("\t\tit '#{test_desc}' do")
-        minitest_lines.push("\t\t\t#{@function_name}(#{parameters_fixed.join(',')}).must_equal(#{must_equal})")
+        minitest_lines.push("\t\t\t#{@function_name}(#{parameters_fixed.join(',')}).must_equal(#{must_equal_fixed})")
         minitest_lines.push("\t\tend")
 
         return minitest_lines

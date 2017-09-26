@@ -65,4 +65,12 @@ t.create("methods2")
         t.test("Fib returns FizzBuzz", ["Fib"], "FizzBuzz"),
         t.test("call returns call", ["call"], "call")
     ])
+    t.new_test("first_last_six?")
+    t.function_test([
+        t.test("array does have 6 as a first or last element", [[1,2,3,4,5,6]], true),
+        t.test("array does have 6 as a first or last element", [[6,5,4,3,2,1]], true),
+        t.test("array does not have 6 as a first or last element", [[1,2,3]], false),
+        t.test("array does not have 6 as a first or last element", [[3]], false),
+        t.test("array does have 6 as a first or last element", [[6]], true)
+    ])
 t.write(File.basename(__FILE__))

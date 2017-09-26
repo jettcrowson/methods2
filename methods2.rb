@@ -73,10 +73,22 @@ end
 # TODO - write fizz_string
 
 def fizz_string(str)
-    return str[0].downcase
+    if str.downcase[0] == "f" && str.downcase[-1] == "b"
+        return "FizzBuzz"
+    elsif str.downcase[0] == "f"
+        return "Fizz"
+    elsif str.downcase[-1] == "b"
+        return "Buzz"
+    else
+        return str
+    end
 end
 
 # TODO - write first_last_six?
+
+def first_last_six?(num_list)
+    return num_list[1] == 6 || num_list[-1] == 6 ? true : false
+end
 
 # TODO - write rotate_left
 

@@ -128,19 +128,36 @@ describe 'methods2' do
 	end
 	describe 'fizz_string' do
 		it 'firetruck returns Fizz' do
-			fizz_string('firetruck').must_equal(Fizz)
+			fizz_string('firetruck').must_equal('Fizz')
 		end
 		it 'dab returns Buzz' do
-			fizz_string('dab').must_equal(Buzz)
+			fizz_string('dab').must_equal('Buzz')
 		end
 		it 'fib returns FizzBuzz' do
-			fizz_string('fib').must_equal(FizzBuzz)
+			fizz_string('fib').must_equal('FizzBuzz')
 		end
 		it 'Fib returns FizzBuzz' do
-			fizz_string('Fib').must_equal(FizzBuzz)
+			fizz_string('Fib').must_equal('FizzBuzz')
 		end
 		it 'call returns call' do
-			fizz_string('call').must_equal(call)
+			fizz_string('call').must_equal('call')
+		end
+	end
+	describe 'first_last_six?' do
+		it 'array does have 6 as a first or last element' do
+			first_last_six?([1,2,3,4,5,6]).must_equal(true)
+		end
+		it 'array does have 6 as a first or last element' do
+			first_last_six?([6,5,4,3,2,1]).must_equal(true)
+		end
+		it 'array does not have 6 as a first or last element' do
+			first_last_six?([1,2,3]).must_equal(false)
+		end
+		it 'array does not have 6 as a first or last element' do
+			first_last_six?([3]).must_equal(false)
+		end
+		it 'array does have 6 as a first or last element' do
+			first_last_six?([6]).must_equal(true)
 		end
 	end
 end
