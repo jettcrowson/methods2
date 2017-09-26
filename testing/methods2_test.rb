@@ -73,4 +73,8 @@ t.create("methods2")
         t.test("array does not have 6 as a first or last element", [[3]], false),
         t.test("array does have 6 as a first or last element", [[6]], true)
     ])
+    t.new_test("rotate_left")
+    t.function_test([
+        t.test("will return 2,3,1", [1,2,3], [2,3,1])
+    ])
 t.write(File.basename(__FILE__))
