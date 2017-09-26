@@ -77,4 +77,15 @@ t.create("methods2")
     t.function_test([
         t.test("will return 2,3,1", [[1,2,3]], [2,3,1])
     ])
+    t.new_test("double23?")
+    t.function_test([
+        t.test("array does have 2 or 3 twice", [[2,2,4]], true),
+        t.test("array does have 2 or 3 twice", [[3,3,2]], true),
+        t.test("array does have 2 or 3 twice", [[2,2]], true),
+        t.test("array does have 2 or 3 twice", [[3,3]], true),
+        t.test("array does not have 2 or 3 twice", [[1,2,3]], false),
+        t.test("array does not have 2 or 3 twice", [[2,3]], false),
+        t.test("array does not have 2 or 3 twice", [[2]], false),
+        t.test("array does not have 2 or 3 twice", [[]], false)
+    ])
 t.write(File.basename(__FILE__))
