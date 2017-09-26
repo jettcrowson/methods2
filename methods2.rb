@@ -87,7 +87,7 @@ end
 # TODO - write first_last_six?
 
 def first_last_six?(num_list)
-    return num_list[1] == 6 || num_list[-1] == 6 ? true : false
+    return num_list[0] == 6 || num_list[-1] == 6 ? true : false
 end
 
 # TODO - write rotate_left
